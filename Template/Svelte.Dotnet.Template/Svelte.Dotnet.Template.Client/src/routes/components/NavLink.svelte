@@ -1,9 +1,16 @@
 <script lang="ts">
-    import { page } from '$app/stores';
-    
-    $: activeClass = $$props.href == $page.url.pathname ? "active" : "";
+  import { page } from '$app/state';
+
+  let props = $props();
+  let { href, class: className, children } = props;
+
+  // pathname как реактивное значение
+  const pathname = $derived(page.url.pathname);
+
+  // класс на основе текущего pathname
+  const activeClass = $derived(href === pathname ? 'active' : '');
 </script>
 
-<a class="{$$props.class} {activeClass}" href={$$props.href}>
-    <slot/>
+<a class="{className} {activeClass}" href={href}>
+  {@render children()}
 </a>

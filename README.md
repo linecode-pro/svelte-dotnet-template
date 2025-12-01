@@ -1,3 +1,9 @@
+# Update 2025-12-01
+
+The template has been updated to use Svelte 5 and .NET 10.
+
+
+
 # Svelte .NET Template
 
 ![image](https://github.com/user-attachments/assets/e3030a5d-33f0-49db-ab09-b5ba9934ada0)

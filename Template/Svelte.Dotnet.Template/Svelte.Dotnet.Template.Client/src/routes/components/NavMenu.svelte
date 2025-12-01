@@ -12,7 +12,7 @@
 <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">Svelte App</a>
-        <button title="Navigation menu" class="navbar-toggler" on:click={toggleNavMenu}>
+        <button title="Navigation menu" class="navbar-toggler" aria-label="Toggle navigation menu" on:click={toggleNavMenu}>
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>

@@ -1,12 +1,11 @@
 <script>
-    import PageTitle from "../components/PageTitle.svelte";
+  import PageTitle from '../components/PageTitle.svelte';
 
-    let currentCount = 0;
+  let currentCount = $state(0);
 
-    function incrementCount()
-    {
-        currentCount++;
-    }
+  function incrementCount() {
+    currentCount++;
+  }
 </script>
 
 <PageTitle>Counter</PageTitle>
@@ -15,4 +14,4 @@
 
 <p role="status">Current count: {currentCount}</p>
 
-<button class="btn btn-primary" on:click={incrementCount}>Click me</button>
+<button class="btn btn-primary" onclick={incrementCount}>Click me</button>
